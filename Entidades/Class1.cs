@@ -4,7 +4,7 @@
     {
         public static void Saludo()
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Hello, World! XD");
         }
     }
 }
