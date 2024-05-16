@@ -9,3 +9,4 @@ D:\fenri\Documents\01-Segundo Cuatrimestre (Labo y Progra II)\primerParcial\Enti
 D:\fenri\Documents\01-Segundo Cuatrimestre (Labo y Progra II)\primerParcial\Entidades\obj\Debug\net7.0\refint\Entidades.dll
 D:\fenri\Documents\01-Segundo Cuatrimestre (Labo y Progra II)\primerParcial\Entidades\obj\Debug\net7.0\Entidades.pdb
 D:\fenri\Documents\01-Segundo Cuatrimestre (Labo y Progra II)\primerParcial\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+D:\fenri\Documents\01-Segundo Cuatrimestre (Labo y Progra II)\primerParcial\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json

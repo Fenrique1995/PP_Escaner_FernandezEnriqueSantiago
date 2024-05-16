@@ -6,7 +6,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Class1.Saludo();
+            
         }
     }
 }

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2380E0FF-EF4A-4EE9-A799-CA066C75213F}|Test.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\pp_escaner_fernandezenriquesantiago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,7 +35,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T20:35:56.883Z",
               "EditorCaption": ""
@@ -43,14 +43,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\Entidades\\Class1.cs",
-              "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Class1.cs",
-              "RelativeToolTip": "..\\Entidades\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Title": "Documento.cs",
+              "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Documento.cs",
+              "RelativeDocumentMoniker": "..\\Entidades\\Documento.cs",
+              "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Documento.cs",
+              "RelativeToolTip": "..\\Entidades\\Documento.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAswDoAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:36:47.436Z",
+              "WhenOpened": "2024-05-16T00:23:31.838Z",
               "EditorCaption": ""
             }
           ]
