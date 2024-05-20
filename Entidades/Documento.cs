@@ -23,7 +23,7 @@ namespace Entidades
         private string numNormalizado;
         private string titulo;
 
-        protected Documento(string titulo, string autor, int anio, string numNormalizado, string barcode)
+        public Documento(string titulo, string autor, int anio, string numNormalizado, string barcode)
         {
             this.titulo = titulo;
             this.autor = autor;
@@ -33,15 +33,21 @@ namespace Entidades
             this.estado = Paso.Inicio;
         }
 
-        public int GetAnio () => anio;
-        public string GetAutor () => autor;
-        public string GetBarcode () => barcode;
-        public Paso GetEstado() => estado;
-        public string GetNumNormalizado() => numNormalizado;
-        public string GetTitulo() => titulo;
+        public int Anio { get { return anio;} } 
+        public string Autor { get { return autor;} }
+        
+        public string Barcode { get { return barcode;} }
+        
+        public Paso Estado { get { return estado;} }
+        
+        protected string NumNormalizado => numNormalizado;
+        public string Titulo { get { return titulo;} }
+        
 
         // Método abstracto (sin implementación)
         public abstract void MostrarInformacion();
+
+         
 
 
         public override string ToString()
