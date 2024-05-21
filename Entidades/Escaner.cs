@@ -28,6 +28,19 @@ namespace Entidades
         {
             this.marca = marca;
             this.tipo = tipo;
+            this.listaDocumentos = new List<Documento>();
+            if (this.tipo == TipoDoc.mapa)
+            {
+                this.locacion = Departamento.mapoteca;
+            }
+            else if (this.tipo == TipoDoc.libro)
+            {
+                this.locacion = Departamento.procesosTecnicos;
+            }
+            else
+            {
+                this.locacion = Departamento.nulo;
+            }
         }
 
         public List<Documento> ListaDocumentos { get{ return listaDocumentos; } }
@@ -35,9 +48,18 @@ namespace Entidades
         public string Marca { get {  return marca; } }
         public TipoDoc Tipo { get { return tipo; } }
 
-        public static bool CambiarEstadoDocumento (Documento d)
+        public static bool CambiarEstadoDocumento (Documento? d)
         {
-            return true;
+            if (d == null)
+            {
+                return false;
+            }
+
+            if ((d is Libro) || (d is Mapa))
+            {
+                return d.AvanzarEstado();
+            }
+            return false;
         }
     }
 }
