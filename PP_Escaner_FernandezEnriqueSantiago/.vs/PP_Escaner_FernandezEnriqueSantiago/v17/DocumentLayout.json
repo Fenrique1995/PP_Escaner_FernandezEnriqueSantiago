@@ -3,10 +3,13 @@
   "WorkspaceRootPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -22,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +37,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Informes.cs",
+              "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Informes.cs",
+              "RelativeDocumentMoniker": "..\\Entidades\\Informes.cs",
+              "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Informes.cs",
+              "RelativeToolTip": "..\\Entidades\\Informes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T23:02:21.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Libro.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Libro.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Libro.cs",
@@ -47,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Mapa.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Mapa.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Mapa.cs",
@@ -73,13 +89,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Escaner.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Escaner.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Escaner.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Escaner.cs",
               "RelativeToolTip": "..\\Entidades\\Escaner.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAYwF4AAAAqAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAwFwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-20T10:47:35.597Z",
               "EditorCaption": ""

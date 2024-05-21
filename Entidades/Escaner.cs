@@ -88,14 +88,11 @@ namespace Entidades
             if (d == null || e == null) return false;
             foreach (var item in e.listaDocumentos)
             {
-                if (!item.Equals(d) && d.Estado == Paso.Inicio)
+                if (item != d && d.Estado == Paso.Inicio)
                 {
-                    if (d is Libro || d is Mapa)
-                    {
-                        d.AvanzarEstado();
+                        CambiarEstadoDocumento(d);
                         e.listaDocumentos.Add(d);
                         return true;
-                    }
                 }
                 
             }
