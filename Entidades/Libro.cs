@@ -17,10 +17,6 @@ namespace Entidades
             this.numPaginas = numPaginas;
         }
 
-        public override void MostrarInformacion()
-        {
-
-        }
 
         public string ISBN { get{ return NumNormalizado; } } 
         public int NumPaginas { get { return numPaginas; } } 
@@ -35,46 +31,18 @@ namespace Entidades
         }
 
 
-        public override bool Equals(object? obj)
-        {
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (ReferenceEquals(obj, null) || obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            Libro other = (Libro)obj;
-            return ISBN == other.ISBN && Titulo == other.Titulo && Autor == other.Autor && Barcode == other.Barcode;
-        }
-
-
 
         public static bool operator == (Libro? l1, Libro? l2)
         {
-            if (ReferenceEquals(l1, l2))
-            {
-                return true;
-            }
-
-            if (ReferenceEquals(l1, null) || ReferenceEquals(l2, null))
-            {
-                return false;
-            }
-
-            return l1.Equals(l2);
+            if (l1 == null || l2 == null) return true;
+            if (l1.Barcode == l2.Barcode || l1.ISBN == l2.ISBN || l1.Titulo == l2.Titulo && l1.Autor == l2.Autor) return true;
+            
+           return false;
         }
         public static bool operator !=(Libro? l1, Libro? l2)
         {
             return !(l1 == l2);
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Titulo, Autor, ISBN, Barcode);
-        }
     }
 }

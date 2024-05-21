@@ -18,10 +18,8 @@ namespace Entidades
             this.ancho = ancho;
         }
 
-        public override void MostrarInformacion()
-        {
-
-        }
+     
+        
 
         public int Alto { get { return alto; } }
         public int Ancho { get { return ancho; } }
@@ -35,35 +33,12 @@ namespace Entidades
             return mensaje.ToString();
         }
 
-        public override bool Equals(object? obj)
-        {
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (ReferenceEquals(obj, null) || obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            Mapa other = (Mapa)obj;
-            return Titulo == other.Titulo && Autor == other.Autor && Barcode == other.Barcode && Anio == other.Anio && Superficie == other.Superficie;
-        }
-
         public static bool operator ==(Mapa? M1, Mapa? M2)
         {
-            if (ReferenceEquals(M1, M2))
-            {
-                return true;
-            }
+            if (M1 == null || M2 == null) return true;
+            if (M1.Barcode == M2.Barcode || M1.Titulo == M2.Titulo && M1.Autor == M2.Autor && M1.Superficie == M2.Superficie) return true;
 
-            if (ReferenceEquals(M1, null) || ReferenceEquals(M2, null))
-            {
-                return false;
-            }
-
-            return M1.Equals(M2);
+            return false;
         }
 
         public static bool operator !=(Mapa? M1, Mapa? M2)
@@ -71,9 +46,6 @@ namespace Entidades
             return !(M1 == M2);
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Titulo, Autor, Barcode, Anio, Superficie);
-        }
+        
     }
 }

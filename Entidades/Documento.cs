@@ -44,9 +44,6 @@ namespace Entidades
         public string Titulo { get { return titulo;} }
         
 
-        // Método abstracto (sin implementación)
-        public abstract void MostrarInformacion();
-
          
 
 
