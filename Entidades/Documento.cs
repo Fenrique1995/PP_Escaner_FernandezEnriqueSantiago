@@ -53,6 +53,10 @@ namespace Entidades
             mensaje.AppendLine($"Titulo: {titulo}");
             mensaje.AppendLine($"Autor: {autor}");
             mensaje.AppendLine($"Año: {anio}");
+            if (this is Libro)
+            {
+                mensaje.AppendLine($"ISBN: {NumNormalizado}");
+            }
             mensaje.AppendLine($"Cod. de barras: {barcode}");
             return mensaje.ToString();
         }

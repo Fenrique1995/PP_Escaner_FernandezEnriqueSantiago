@@ -25,7 +25,6 @@ namespace Entidades
         {
             StringBuilder mensaje = new StringBuilder();
             mensaje.Append(base.ToString());
-            mensaje.AppendLine($"ISBN: {NumNormalizado}");
             mensaje.AppendLine($"Numero de Paginas: {numPaginas}");
             return mensaje.ToString();
         }

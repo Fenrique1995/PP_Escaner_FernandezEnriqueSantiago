@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -80,6 +81,22 @@ namespace Entidades
         public static bool operator !=(Documento? d, Escaner e)
         {
             return !(d == e);
+        }
+
+        public static bool operator +(Documento? d, Escaner e)
+        {
+            if (d == null || e == null) return false;
+            if (d is Libro)
+            {
+                e.listaDocumentos.Add(d);
+                return true;
+            }
+            else if (d is Mapa)
+            {
+                e.listaDocumentos.Add(d);
+                return true;
+            }       
+            return false;
         }
     }
 }
