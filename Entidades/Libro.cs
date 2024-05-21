@@ -31,7 +31,6 @@ namespace Entidades
         }
 
 
-
         public static bool operator == (Libro? l1, Libro? l2)
         {
             if (l1 == null || l2 == null) return true;

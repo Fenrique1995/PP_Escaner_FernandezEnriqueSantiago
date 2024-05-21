@@ -18,9 +18,6 @@ namespace Entidades
             this.ancho = ancho;
         }
 
-     
-        
-
         public int Alto { get { return alto; } }
         public int Ancho { get { return ancho; } }
         public int Superficie { get { return Ancho * Alto; } }

@@ -40,7 +40,7 @@ namespace Entidades
         
         public Paso Estado { get { return estado;} }
         
-        protected string NumNormalizado => numNormalizado;
+        protected string NumNormalizado { get { return numNormalizado; } }
         public string Titulo { get { return titulo;} }
         
 

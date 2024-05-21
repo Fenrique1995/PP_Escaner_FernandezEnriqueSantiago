@@ -61,5 +61,25 @@ namespace Entidades
             }
             return false;
         }
+
+        public static bool operator ==(Documento? d, Escaner e)
+        {
+            if (d == null || e == null) return false;
+           
+            foreach (var item in e.listaDocumentos) 
+            {
+                if (item == d)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(Documento? d, Escaner e)
+        {
+            return !(d == e);
+        }
     }
 }
