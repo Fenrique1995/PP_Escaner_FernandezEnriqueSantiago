@@ -86,16 +86,20 @@ namespace Entidades
         public static bool operator +(Documento? d, Escaner e)
         {
             if (d == null || e == null) return false;
-            if (d is Libro)
+            foreach (var item in e.listaDocumentos)
             {
-                e.listaDocumentos.Add(d);
-                return true;
+                if (!item.Equals(d) && d.Estado == Paso.Inicio)
+                {
+                    if (d is Libro || d is Mapa)
+                    {
+                        d.AvanzarEstado();
+                        e.listaDocumentos.Add(d);
+                        return true;
+                    }
+                }
+                
             }
-            else if (d is Mapa)
-            {
-                e.listaDocumentos.Add(d);
-                return true;
-            }       
+            
             return false;
         }
     }
