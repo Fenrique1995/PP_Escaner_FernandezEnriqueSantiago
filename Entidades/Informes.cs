@@ -18,30 +18,27 @@ namespace Entidades
             extension = 0;
             cantidad = 0;
             resumen = "";
-            switch (paso)
-            {
-                case Paso.Inicio:
-                    extension = 1;
-                    break;
-                case Paso.Distribuido:
-                    extension = 2;
-                    break;
-                case Paso.EnEscaner:
-                    extension = 3;
-                    break;
-                case Paso.EnRevision:
-                    extension = 4;
-                    break;
-                case Paso.Terminado:
-                    extension = 5;
-                    break;
-            }
             if (e.Tipo == TipoDoc.libro || e.Tipo == TipoDoc.mapa)
             {
                 foreach (var item in e.ListaDocumentos)
                 {
-                    cantidad++;
-                    resumen += item.ToString() + "\n";
+                    if (item.Estado == paso)
+                    {
+                        cantidad++;
+                        if (e.Tipo == TipoDoc.libro)
+                        {
+                            if (item is Libro libro)
+                            {
+                                extension += libro.NumPaginas;
+                            }
+                            else if (item is Mapa mapa)
+                            {
+                                extension += mapa.Superficie;
+                            }
+                        }
+                        resumen += item.ToString() + "\n";
+                    }
+                   
                 }
             }
 

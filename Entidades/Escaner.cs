@@ -63,7 +63,7 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator ==(Documento? d, Escaner e)
+        public static bool operator ==(Escaner e, Documento? d)
         {
             if (d == null || e == null) return false;
            
@@ -78,25 +78,26 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator !=(Documento? d, Escaner e)
+        public static bool operator !=(Escaner e, Documento? d)
         {
-            return !(d == e);
+            return !(e == d);
         }
 
-        public static bool operator +(Documento? d, Escaner e)
+        public static bool operator +(Escaner e, Documento? d)
         {
             if (d == null || e == null) return false;
-            foreach (var item in e.listaDocumentos)
+
+            // Verifica si el documento ya está en la lista
+            if (e.listaDocumentos.Contains(d)) return false;
+
+            // Verifica que el documento esté en el estado de inicio
+            if (d.Estado == Paso.Inicio)
             {
-                if (item != d && d.Estado == Paso.Inicio)
-                {
-                        CambiarEstadoDocumento(d);
-                        e.listaDocumentos.Add(d);
-                        return true;
-                }
-                
+                CambiarEstadoDocumento(d);
+                e.listaDocumentos.Add(d);
+                return true;
             }
-            
+
             return false;
         }
     }
