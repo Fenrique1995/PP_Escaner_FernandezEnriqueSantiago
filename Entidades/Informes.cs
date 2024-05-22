@@ -39,7 +39,7 @@ namespace Entidades
                     if (item.Estado == paso)
                     {
                         cantidad++;
-                        if (e.Tipo == TipoDoc.libro)
+                        if (e.Tipo == TipoDoc.libro || e.Tipo == TipoDoc.mapa)
                         {
                             if (item is Libro libro)
                             {
@@ -54,11 +54,11 @@ namespace Entidades
                     }
                 }
             }
-
+            /*
             if (cantidad == 0)
             {
                 resumen = "Nulo";
-            }
+            }*/
         }
 
         /// Muestra los documentos que están en el estado "EnEscaner" para un escáner específico.
