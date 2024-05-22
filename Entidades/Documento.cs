@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// Enumera los diferentes estados por los que puede pasar un documento.
     public enum Paso
     {
         Inicio,
@@ -14,15 +15,23 @@ namespace Entidades
         EnRevision,
         Terminado
     }
+
+    /// Representa un documento abstracto con propiedades comunes y métodos para avanzar su estado.
     public abstract class Documento
     {
-        private int anio;
-        private string autor;
-        private string barcode;
-        private Paso estado;
-        private string numNormalizado;
-        private string titulo;
+        private int anio; // Año de publicación del documento.
+        private string autor; // Autor del documento.
+        private string barcode; // Código de barras del documento.
+        private Paso estado; // Estado actual del documento.
+        private string numNormalizado; // Número normalizado (ej. ISBN para libros).
+        private string titulo; // Título del documento.
 
+        /// Constructor que inicializa un nuevo documento con los detalles especificados.
+        /// <param name="titulo">Título del documento.</param>
+        /// <param name="autor">Autor del documento.</param>
+        /// <param name="anio">Año de publicación del documento.</param>
+        /// <param name="numNormalizado">Número normalizado del documento.</param>
+        /// <param name="barcode">Código de barras del documento.</param>
         public Documento(string titulo, string autor, int anio, string numNormalizado, string barcode)
         {
             this.titulo = titulo;
@@ -33,20 +42,26 @@ namespace Entidades
             this.estado = Paso.Inicio;
         }
 
-        public int Anio { get { return anio;} } 
-        public string Autor { get { return autor;} }
-        
-        public string Barcode { get { return barcode;} }
-        
-        public Paso Estado { get { return estado;} }
-        
+        /// Obtiene el año de publicación del documento.
+        public int Anio { get { return anio; } }
+
+        /// Obtiene el autor del documento.
+        public string Autor { get { return autor; } }
+
+        /// Obtiene el código de barras del documento.
+        public string Barcode { get { return barcode; } }
+
+        /// Obtiene el estado actual del documento.
+        public Paso Estado { get { return estado; } }
+
+        /// Obtiene el número normalizado del documento.
         protected string NumNormalizado { get { return numNormalizado; } }
-        public string Titulo { get { return titulo;} }
-        
 
-         
+        /// Obtiene el título del documento.
+        public string Titulo { get { return titulo; } }
 
-
+        /// Devuelve una representación en cadena del documento.
+        /// <returns>Una cadena que representa el documento.</returns>
         public override string ToString()
         {
             StringBuilder mensaje = new StringBuilder();
@@ -61,9 +76,11 @@ namespace Entidades
             return mensaje.ToString();
         }
 
+        /// Avanza el estado del documento al siguiente paso en el proceso.
+        /// <returns>True si el estado fue avanzado, de lo contrario, false.</returns>
         public bool AvanzarEstado()
         {
-            switch (estado)//En este switch el estado que pongas pasara al siguiente
+            switch (estado)
             {
                 case Paso.Inicio:
                     estado = Paso.Distribuido;
