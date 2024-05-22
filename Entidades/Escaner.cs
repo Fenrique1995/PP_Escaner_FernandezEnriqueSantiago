@@ -125,9 +125,13 @@ namespace Entidades
             // Verifica que el documento esté en el estado de inicio.
             if (d.Estado == Paso.Inicio)
             {
-                CambiarEstadoDocumento(d);
-                e.listaDocumentos.Add(d);
-                return true;
+                // Verifica si el documento es un libro o mapa y el escáner es de libros o mapas.
+                if (d is Libro && e.Tipo == TipoDoc.libro || d is Mapa && e.Tipo == TipoDoc.mapa)
+                {
+                    CambiarEstadoDocumento(d);
+                    e.listaDocumentos.Add(d);
+                    return true;
+                }
             }
 
             return false;
