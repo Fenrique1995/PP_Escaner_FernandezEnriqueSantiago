@@ -4,23 +4,11 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using static Entidades.Documento;
 
 namespace Entidades
 {
-    /// Enumera los diferentes departamentos donde puede estar ubicado el escáner.
-    public enum Departamento
-    {
-        nulo,
-        mapoteca,
-        procesosTecnicos
-    }
-
-    /// Enumera los diferentes tipos de documentos que puede manejar el escáner.
-    public enum TipoDoc
-    {
-        libro,
-        mapa
-    }
+    
 
     /// Representa un escáner que puede manejar diferentes tipos de documentos y está ubicado en diferentes departamentos.
     public class Escaner
@@ -29,6 +17,21 @@ namespace Entidades
         private Departamento locacion; // Departamento donde está ubicado el escáner.
         private string marca; // Marca del escáner.
         private TipoDoc tipo; // Tipo de documento que el escáner maneja.
+
+        /// Enumera los diferentes departamentos donde puede estar ubicado el escáner.
+        public enum Departamento
+        {
+            nulo,
+            mapoteca,
+            procesosTecnicos
+        }
+
+        /// Enumera los diferentes tipos de documentos que puede manejar el escáner.
+        public enum TipoDoc
+        {
+            libro,
+            mapa
+        }
 
         /// Constructor que inicializa un nuevo escáner con la marca y el tipo de documento especificados.
         /// <param name="marca">Marca del escáner.</param>
@@ -117,23 +120,31 @@ namespace Entidades
         /// <returns>True si el documento fue agregado, de lo contrario, false.</returns>
         public static bool operator +(Escaner e, Documento? d)
         {
-            if (d == null || e == null) return false;
-
-            // Verifica si el documento ya está en la lista.
-            if (e.listaDocumentos.Contains(d)) return false;
-
-            // Verifica que el documento esté en el estado de inicio.
-            if (d.Estado == Paso.Inicio)
+            if (d.Estado != Paso.Inicio)
             {
-                // Verifica si el documento es un libro o mapa y el escáner es de libros o mapas.
-                if (d is Libro && e.Tipo == TipoDoc.libro || d is Mapa && e.Tipo == TipoDoc.mapa)
+                return false;
+            }
+
+            if ((e.Tipo == TipoDoc.libro && d is Mapa) || (e.Tipo == TipoDoc.mapa && d is Libro))
+            {
+                return false;
+            }
+
+            foreach (Documento doc in e.listaDocumentos)
+            {
+                if ((doc is Libro libroDoc && d is Libro libro) && (libroDoc == libro))
                 {
-                    CambiarEstadoDocumento(d);
-                    e.listaDocumentos.Add(d);
-                    return true;
+                    return false;
+                }
+                else if ((doc is Mapa mapaDoc && d is Mapa mapa) && (mapaDoc == mapa))
+                {
+                    return false;
                 }
             }
-            return false;
+
+            d.AvanzarEstado();
+            e.ListaDocumentos.Add(d);
+            return true;
         }
     }
 }

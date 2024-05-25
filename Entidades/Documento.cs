@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    /// Enumera los diferentes estados por los que puede pasar un documento.
-    public enum Paso
-    {
-        Inicio,
-        Distribuido,
-        EnEscaner,
-        EnRevision,
-        Terminado
-    }
+    
 
     /// Representa un documento abstracto con propiedades comunes y métodos para avanzar su estado.
     public abstract class Documento
@@ -26,6 +18,15 @@ namespace Entidades
         private string numNormalizado; // Número normalizado (ej. ISBN para libros).
         private string titulo; // Título del documento.
 
+        /// Enumera los diferentes estados por los que puede pasar un documento.
+        public enum Paso
+        {
+            Inicio,
+            Distribuido,
+            EnEscaner,
+            EnRevision,
+            Terminado
+        }
         /// Constructor que inicializa un nuevo documento con los detalles especificados.
         /// <param name="titulo">Título del documento.</param>
         /// <param name="autor">Autor del documento.</param>

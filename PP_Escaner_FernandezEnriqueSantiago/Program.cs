@@ -29,8 +29,8 @@ namespace Test
             Mapa m6 = new Mapa("Buenos Aires", "Instituto Geográfico de Buenos Aires", 2005, "", "99993", 30, 15);//200
 
             //ESCANERS
-            Escaner l = new Escaner("HP", TipoDoc.libro);
-            Escaner m = new Escaner("HP", TipoDoc.mapa);
+            Escaner l = new Escaner("HP", Escaner.TipoDoc.libro);
+            Escaner m = new Escaner("HP", Escaner.TipoDoc.mapa);
 
             bool pudo = l + l1;
             pudo = l + l2;

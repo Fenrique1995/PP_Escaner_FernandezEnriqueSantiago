@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Entidades.Documento;
+using static Entidades.Escaner;
 
 namespace Entidades
 {
@@ -30,35 +32,30 @@ namespace Entidades
         {
             extension = 0;
             cantidad = 0;
-            resumen = "";
+            resumen = "";   
 
-            if (e.Tipo == TipoDoc.libro || e.Tipo == TipoDoc.mapa)
+            foreach (var item in e.ListaDocumentos)
             {
-                foreach (var item in e.ListaDocumentos)
+                // Verificar el estado del documento
+                if (item.Estado == paso)
                 {
-                    if (item.Estado == paso)
+                    // Incrementar cantidad solo si el documento está en el estado correcto
+                    cantidad++;
+
+                    // Sumar la extensión solo si el documento está en el estado correcto
+                    if (item is Libro libro)
                     {
-                        cantidad++;
-                        if (e.Tipo == TipoDoc.libro || e.Tipo == TipoDoc.mapa)
-                        {
-                            if (item is Libro libro)
-                            {
-                                extension += libro.NumPaginas;
-                            }
-                            else if (item is Mapa mapa)
-                            {
-                                extension += mapa.Superficie;
-                            }
-                        }
-                        resumen += item.ToString() + "\n";
+                        extension += libro.NumPaginas;
                     }
+                    else if (item is Mapa mapa)
+                    {
+                        extension += mapa.Superficie;
+                    }
+
+                    // Agregar el documento al resumen solo si está en el estado correcto
+                    resumen += item.ToString() + "\n";
                 }
             }
-            /*
-            if (cantidad == 0)
-            {
-                resumen = "Nulo";
-            }*/
         }
 
         /// Muestra los documentos que están en el estado "EnEscaner" para un escáner específico.
