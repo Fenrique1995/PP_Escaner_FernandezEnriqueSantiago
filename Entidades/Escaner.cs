@@ -8,8 +8,6 @@ using static Entidades.Documento;
 
 namespace Entidades
 {
-    
-
     /// Representa un escáner que puede manejar diferentes tipos de documentos y está ubicado en diferentes departamentos.
     public class Escaner
     {
@@ -94,7 +92,7 @@ namespace Entidades
         {
             if (d == null || e == null) return false;
 
-            foreach (var item in e.listaDocumentos)
+            foreach (var item in e.ListaDocumentos)
             {
                 if (item == d)
                 {
@@ -120,31 +118,50 @@ namespace Entidades
         /// <returns>True si el documento fue agregado, de lo contrario, false.</returns>
         public static bool operator +(Escaner e, Documento? d)
         {
-            if (d.Estado != Paso.Inicio)
+            if (d == null || d.Estado != Paso.Inicio)
             {
                 return false;
             }
 
+            // Corrección: Asegurarse de que el tipo del documento coincida con el tipo del escáner
             if ((e.Tipo == TipoDoc.libro && d is Mapa) || (e.Tipo == TipoDoc.mapa && d is Libro))
             {
                 return false;
             }
 
-            foreach (Documento doc in e.listaDocumentos)
+            if (e.ListaDocumentos.Contains(d))
             {
-                if ((doc is Libro libroDoc && d is Libro libro) && (libroDoc == libro))
-                {
-                    return false;
-                }
-                else if ((doc is Mapa mapaDoc && d is Mapa mapa) && (mapaDoc == mapa))
-                {
-                    return false;
-                }
+                return false;
             }
-
-            d.AvanzarEstado();
+            
             e.ListaDocumentos.Add(d);
+            CambiarEstadoDocumento(d);
             return true;
+        }
+
+        /// Implementa el método Equals para comparar escáneres.
+        /// <param name="obj">El objeto a comparar con el escáner actual.</param>
+        /// <returns>True si los objetos son iguales, de lo contrario, false.</returns>
+        public override bool Equals(object? obj)
+        {
+            if (obj is Escaner escaner)
+            {
+                return marca == escaner.marca && tipo == escaner.tipo && locacion == escaner.locacion &&
+                       ListaDocumentos.SequenceEqual(escaner.ListaDocumentos);
+            }
+            return false;
+        }
+
+        /// Implementa el método GetHashCode para generar un código hash para el escáner.
+        /// <returns>El código hash del escáner.</returns>
+        public override int GetHashCode()
+        {
+            int hash = HashCode.Combine(marca, tipo, locacion);
+            foreach (var doc in ListaDocumentos)
+            {
+                hash = HashCode.Combine(hash, doc.GetHashCode());
+            }
+            return hash;
         }
     }
 }

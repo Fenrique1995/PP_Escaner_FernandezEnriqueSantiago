@@ -96,7 +96,7 @@ namespace Entidades
                     estado = Paso.Terminado;
                     return true;
                 case Paso.Terminado:
-                    return false; // Estado final, no se puede avanzar más
+                    return true; // Estado final, no se puede avanzar más
                 default:
                     return false; // Caso inesperado
             }

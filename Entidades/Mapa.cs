@@ -52,6 +52,7 @@ namespace Entidades
         /// <returns>True si los mapas son iguales, de lo contrario, false.</returns>
         public static bool operator ==(Mapa? M1, Mapa? M2)
         {
+            if (ReferenceEquals(M1, M2)) return true;
             if (M1 is null || M2 is null) return false;
             return M1.Barcode == M2.Barcode ||
                    (M1.Titulo == M2.Titulo && M1.Autor == M2.Autor && M1.Superficie == M2.Superficie);
@@ -64,6 +65,25 @@ namespace Entidades
         public static bool operator !=(Mapa? M1, Mapa? M2)
         {
             return !(M1 == M2);
+        }
+
+        /// Determina si el objeto especificado es igual al objeto actual.
+        /// <param name="obj">El objeto a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto especificado es igual al objeto actual; de lo contrario, false.</returns>
+        public override bool Equals(object? obj)
+        {
+            if (obj is Mapa other)
+            {
+                return this == other;
+            }
+            return false;
+        }
+
+        /// Sirve como la función hash predeterminada.
+        /// <returns>Un código hash para el objeto actual.</returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Barcode, Titulo, Autor, Superficie);
         }
     }
 }

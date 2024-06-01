@@ -47,6 +47,7 @@ namespace Entidades
         /// <returns>True si los libros son iguales, de lo contrario, false.</returns>
         public static bool operator ==(Libro? l1, Libro? l2)
         {
+            if (ReferenceEquals(l1, l2)) return true;
             if (l1 is null || l2 is null) return false;
             return l1.Barcode == l2.Barcode ||
                    l1.ISBN == l2.ISBN ||
@@ -60,6 +61,25 @@ namespace Entidades
         public static bool operator !=(Libro? l1, Libro? l2)
         {
             return !(l1 == l2);
+        }
+
+        /// Determina si el objeto especificado es igual al objeto actual.
+        /// <param name="obj">El objeto a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto especificado es igual al objeto actual; de lo contrario, false.</returns>
+        public override bool Equals(object? obj)
+        {
+            if (obj is Libro other)
+            {
+                return this == other;
+            }
+            return false;
+        }
+
+        /// Sirve como la función hash predeterminada.
+        /// <returns>Un código hash para el objeto actual.</returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Barcode, ISBN, Titulo, Autor);
         }
     }
 }
