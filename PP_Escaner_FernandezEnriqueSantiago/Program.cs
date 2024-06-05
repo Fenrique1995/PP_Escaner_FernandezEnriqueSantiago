@@ -157,18 +157,21 @@ namespace Test
 
             try
             {
-                if (!(m + l1))
-                {
-                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
-                }
-                if (!(l + m1))
+                if (!(l + m6))
                 {
                     throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
                 }
             }
-            catch (TipoIncorrectoException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
+            }
+            try
+            {
+                if (!(m + l5))
+                {
+                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
+                }
             }
             catch (Exception ex)
             {

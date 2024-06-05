@@ -99,20 +99,13 @@ namespace Entidades
                         return true;
                     }
                 }
-            }
-            catch (TipoIncorrectoException mensaje)
-            {
-                Console.WriteLine(mensaje.ToString());
-                Console.WriteLine("Este escáner no acepta este tipo de documento");
-                return false;
+                throw new TipoIncorrectoException("Este escáner no acepta este tipo de documento", nameof(Escaner), "==");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex}");
+                Console.WriteLine(ex.Message);
                 return false;
             }
-
-            return false;
         }
 
         /// Sobrecarga del operador != para comparar un escáner con un documento.
@@ -129,23 +122,25 @@ namespace Entidades
         /// <param name="d">Documento.</param>
         /// <returns>True si el documento fue agregado, de lo contrario, false.</returns>
         public static bool operator +(Escaner e, Documento? d)
-        {
+        {   
+            // Verifica si el documento es nulo o no está en el estado de inicio
             if (d == null || d.Estado != Paso.Inicio)
             {
                 return false;
             }
 
-            // Corrección: Asegurarse de que el tipo del documento coincida con el tipo del escáner
-            if ((e.Tipo == TipoDoc.libro && d is Mapa) || (e.Tipo == TipoDoc.mapa && d is Libro))
+            // Verifica si el tipo del documento coincide con el tipo del escáner
+            if((e.Tipo == TipoDoc.libro && !(d is Libro)) || (e.Tipo == TipoDoc.mapa && !(d is Mapa)))
             {
                 throw new TipoIncorrectoException("El tipo de documento no coincide con el tipo de escáner.", nameof(Escaner), "+");
             }
-
+            // Verifica si el documento ya está en la lista del escáner
             if (e.ListaDocumentos.Contains(d))
             {
                 return false;
             }
 
+            // Agrega el documento a la lista del escáner y cambia su estado
             e.ListaDocumentos.Add(d);
             CambiarEstadoDocumento(d);
             return true;

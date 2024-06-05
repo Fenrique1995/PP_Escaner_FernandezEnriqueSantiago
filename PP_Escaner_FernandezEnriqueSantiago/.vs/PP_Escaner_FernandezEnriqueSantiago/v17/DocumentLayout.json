@@ -3,13 +3,17 @@
   "WorkspaceRootPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\tipoincorrectoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2380E0FF-EF4A-4EE9-A799-CA066C75213F}|Test.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\pp_escaner_fernandezenriquesantiago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2380E0FF-EF4A-4EE9-A799-CA066C75213F}|Test.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\escaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -18,117 +22,105 @@
       "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2380E0FF-EF4A-4EE9-A799-CA066C75213F}|Test.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\pp_escaner_fernandezenriquesantiago\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2380E0FF-EF4A-4EE9-A799-CA066C75213F}|Test.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540BA28D-2033-4377-9364-B36B16AE627C}|..\\Entidades\\Entidades.csproj|d:\\fenri\\documents\\01-segundo cuatrimestre (labo y progra ii)\\primerparcial\\entidades\\tipoincorrectoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "TipoIncorrectoException.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\TipoIncorrectoException.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\TipoIncorrectoException.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\TipoIncorrectoException.cs",
               "RelativeToolTip": "..\\Entidades\\TipoIncorrectoException.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAUwBcAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T01:25:18.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Informes.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Informes.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Informes.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Informes.cs",
               "RelativeToolTip": "..\\Entidades\\Informes.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowB8AAAAIAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAowB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T23:02:21.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAJgAAAAAAAAAAAAqwKMAAAAQAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAcwK4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T15:41:24.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Libro.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Libro.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Libro.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Libro.cs",
               "RelativeToolTip": "..\\Entidades\\Libro.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwCQAAAAIAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowCQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T01:40:01.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Documento.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Documento.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Documento.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Documento.cs",
               "RelativeToolTip": "..\\Entidades\\Documento.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwEIAAAAIAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAkwEIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T01:42:27.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Mapa.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Mapa.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Mapa.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Mapa.cs",
               "RelativeToolTip": "..\\Entidades\\Mapa.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAmwCkAAAAIAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T23:18:39.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Escaner.cs",
               "DocumentMoniker": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Escaner.cs",
               "RelativeDocumentMoniker": "..\\Entidades\\Escaner.cs",
               "ToolTip": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Escaner.cs",
               "RelativeToolTip": "..\\Entidades\\Escaner.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAvwGwAAAAOAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAswI0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-20T10:47:35.597Z",
               "EditorCaption": ""
