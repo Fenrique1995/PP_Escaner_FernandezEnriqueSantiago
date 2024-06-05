@@ -37,7 +37,7 @@ namespace Entidades
         {
             StringBuilder mensaje = new StringBuilder();
             mensaje.Append(base.ToString());
-            mensaje.AppendLine($"Número de Páginas: {numPaginas}");
+            mensaje.AppendLine($"Número de Páginas: {NumPaginas}");
             return mensaje.ToString();
         }
 

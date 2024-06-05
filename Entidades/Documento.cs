@@ -66,14 +66,14 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder mensaje = new StringBuilder();
-            mensaje.AppendLine($"Titulo: {titulo}");
-            mensaje.AppendLine($"Autor: {autor}");
-            mensaje.AppendLine($"Año: {anio}");
+            mensaje.AppendLine($"Titulo: {Titulo}");
+            mensaje.AppendLine($"Autor: {Autor}");
+            mensaje.AppendLine($"Año: {Anio}");
             if (this is Libro)
             {
                 mensaje.AppendLine($"ISBN: {NumNormalizado}");
             }
-            mensaje.AppendLine($"Cod. de barras: {barcode}");
+            mensaje.AppendLine($"Cod. de barras: {Barcode}");
             return mensaje.ToString();
         }
 

@@ -53,7 +53,7 @@ namespace Entidades
                     }
 
                     // Agregar el documento al resumen solo si está en el estado correcto
-                    resumen += item.ToString() + "\n";
+                    resumen += item.ToString();
                 }
             }
         }
