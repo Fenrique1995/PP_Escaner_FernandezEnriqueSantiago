@@ -32,19 +32,20 @@ namespace Test
             Escaner l = new Escaner("HP", Escaner.TipoDoc.libro);
             Escaner m = new Escaner("HP", Escaner.TipoDoc.mapa);
 
-            bool pudo = l + l1;
-            pudo = l + l2;
-            pudo = l + l3;
-            pudo = l + l4;
-            pudo = l + l5;
-            pudo = m + m1;
-            pudo = m + m2;
-            pudo = m + m3;
-            pudo = m + m4;
-            pudo = m + m5;
-            pudo = m + m6;
-            pudo = m + l1;
-            pudo = l + m1;
+                bool pudo = l + l1;
+                pudo = l + l2;
+                pudo = l + l3;
+                pudo = l + l4;
+                pudo = l + l5;
+                pudo = m + m1;
+                pudo = m + m2;
+                pudo = m + m3;
+                pudo = m + m4;
+                pudo = m + m5;
+                pudo = m + m6;
+                pudo = m + l1;
+                pudo = l + m1;
+
 
             l1.AvanzarEstado();
             l1.AvanzarEstado();
@@ -153,6 +154,26 @@ namespace Test
             Console.WriteLine($"Cantidad de cm2 en el escáner: {extensionMapaTerminado}.");
             Console.WriteLine(resumenMapaTerminado);
             Console.WriteLine("---------------------");
+
+            try
+            {
+                if (!(m + l1))
+                {
+                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
+                }
+                if (!(l + m1))
+                {
+                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
+                }
+            }
+            catch (TipoIncorrectoException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadKey();
         }
