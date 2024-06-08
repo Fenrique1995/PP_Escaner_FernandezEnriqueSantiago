@@ -138,7 +138,7 @@ namespace Entidades
             }
             catch (TipoIncorrectoException ex)
             {
-                Console.WriteLine(ex.Message+"\n"+ ex.ToString());
+                Console.WriteLine(ex.Message+"\n" + "El documento no se pudo añadir a la lista" +"\n"+ ex.ToString());
             }
             // Verifica si el documento ya está en la lista del escáner
             if (e.ListaDocumentos.Contains(d))
