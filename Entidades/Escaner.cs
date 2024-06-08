@@ -128,11 +128,17 @@ namespace Entidades
             {
                 return false;
             }
-
-            // Verifica si el tipo del documento coincide con el tipo del escáner
-            if((e.Tipo == TipoDoc.libro && !(d is Libro)) || (e.Tipo == TipoDoc.mapa && !(d is Mapa)))
+            try
             {
-                throw new TipoIncorrectoException("El tipo de documento no coincide con el tipo de escáner.", nameof(Escaner), "+");
+                // Verifica si el tipo del documento coincide con el tipo del escáner
+                if ((e.Tipo == TipoDoc.libro && !(d is Libro)) || (e.Tipo == TipoDoc.mapa && !(d is Mapa)))
+                {
+                    throw new TipoIncorrectoException("El tipo de documento no coincide con el tipo de escáner.", nameof(Escaner), "+");
+                }
+            }
+            catch (TipoIncorrectoException ex)
+            {
+                Console.WriteLine(ex.Message+"\n"+ ex.ToString());
             }
             // Verifica si el documento ya está en la lista del escáner
             if (e.ListaDocumentos.Contains(d))

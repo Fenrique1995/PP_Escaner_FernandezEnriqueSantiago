@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\Test.csproj",
+      "projectUniqueName": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\PP_Escaner_FernandezEnriqueSantiago\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\Test.csproj",
+      "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\PP_Escaner_FernandezEnriqueSantiago\\Test.csproj",
       "packagesPath": "C:\\Users\\fenri\\.nuget\\packages\\",
-      "outputPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\PP_Escaner_FernandezEnriqueSantiago\\obj\\",
+      "outputPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\PP_Escaner_FernandezEnriqueSantiago\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fenri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj": {
-              "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj"
+            "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj"
             }
           }
         }

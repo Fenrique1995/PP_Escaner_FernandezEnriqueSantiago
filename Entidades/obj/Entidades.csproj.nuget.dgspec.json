@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj": {}
+    "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj": {
+    "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\Entidades.csproj",
+        "projectPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\fenri\\.nuget\\packages\\",
-        "outputPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\primerParcial\\Entidades\\obj\\",
+        "outputPath": "D:\\fenri\\Documents\\01-Segundo Cuatrimestre (Labo y Progra II)\\PP_Escaner_FernandezEnrique\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fenri\\AppData\\Roaming\\NuGet\\NuGet.Config",

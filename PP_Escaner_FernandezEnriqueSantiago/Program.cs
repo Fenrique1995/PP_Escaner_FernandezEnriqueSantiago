@@ -155,28 +155,10 @@ namespace Test
             Console.WriteLine(resumenMapaTerminado);
             Console.WriteLine("---------------------");
 
-            try
-            {
-                if (!(l + m6))
-                {
-                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            try
-            {
-                if (!(m + l5))
-                {
-                    throw new TipoIncorrectoException("No se pudo agregar el documento al escáner.", "Escaner", "+");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+     
+                pudo = l + m6;
+                pudo = m + l5;
+            
 
             Console.ReadKey();
         }
