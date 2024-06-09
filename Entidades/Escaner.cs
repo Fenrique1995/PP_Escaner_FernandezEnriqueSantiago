@@ -90,8 +90,6 @@ namespace Entidades
         /// <returns>True si el documento está en la lista del escáner, de lo contrario, false.</returns>
         public static bool operator ==(Escaner e, Documento? d)
         {
-            try
-            {
                 foreach (var item in e.ListaDocumentos)
                 {
                     if (item == d)
@@ -100,12 +98,6 @@ namespace Entidades
                     }
                 }
                 throw new TipoIncorrectoException("Este escáner no acepta este tipo de documento", nameof(Escaner), "==");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
         }
 
         /// Sobrecarga del operador != para comparar un escáner con un documento.
@@ -122,34 +114,38 @@ namespace Entidades
         /// <param name="d">Documento.</param>
         /// <returns>True si el documento fue agregado, de lo contrario, false.</returns>
         public static bool operator +(Escaner e, Documento? d)
-        {   
-            // Verifica si el documento es nulo o no está en el estado de inicio
-            if (d == null || d.Estado != Paso.Inicio)
-            {
-                return false;
-            }
+        {
             try
             {
+                // Verifica si el documento es nulo o no está en el estado de inicio
+                if (d == null || d.Estado != Paso.Inicio)
+                {
+                return false;
+                }
+
                 // Verifica si el tipo del documento coincide con el tipo del escáner
                 if ((e.Tipo == TipoDoc.libro && !(d is Libro)) || (e.Tipo == TipoDoc.mapa && !(d is Mapa)))
                 {
                     throw new TipoIncorrectoException("El tipo de documento no coincide con el tipo de escáner.", nameof(Escaner), "+");
                 }
+
+                // Verifica si el documento ya está en la lista del escáner
+                if (e.ListaDocumentos.Contains(d))
+                {
+                    return false;
+                }
+
+                // Agrega el documento a la lista del escáner y cambia su estado
+                e.ListaDocumentos.Add(d);
+                CambiarEstadoDocumento(d);
+                return true;
             }
             catch (TipoIncorrectoException ex)
             {
-                Console.WriteLine(ex.Message+"\n" + "El documento no se pudo añadir a la lista" +"\n"+ ex.ToString());
-            }
-            // Verifica si el documento ya está en la lista del escáner
-            if (e.ListaDocumentos.Contains(d))
-            {
-                return false;
+                //(ex.Message+"\n" + "El documento no se pudo añadir a la lista" +"\n"+ ex.ToString());
+                throw new Exception("El documento no se pudo añadir a la lista",ex);
             }
 
-            // Agrega el documento a la lista del escáner y cambia su estado
-            e.ListaDocumentos.Add(d);
-            CambiarEstadoDocumento(d);
-            return true;
         }
 
         /// Implementa el método Equals para comparar escáneres.
